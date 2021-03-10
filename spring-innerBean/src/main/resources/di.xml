@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   
+   <bean id="stud" class="com.app.model.Student">
+   <property name="id" value="101"></property>
+   <property name="name" value="Rutuja"></property>
+   <property name="certificates">
+          <bean class="com.app.model.Certificate">
+                 <property name="cname">
+                          <list>
+                               <value>JAVA</value>
+                               <value>AWS</value>
+                               <value>SALESFORCE</value>
+                          </list>
+                 </property> 
+
+          </bean>
+   </property>
+   </bean>   
+   
+   
+   
+   <!-- <bean id="stud" class="com.app.model.Student">
+   <property name="certificates">
+      <bean class="com.app.model.Certificate"/>
+   </property>
+   </bean>  -->
+   
+   
+   
+   </beans>
