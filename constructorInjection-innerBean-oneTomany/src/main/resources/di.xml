@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   
+   <bean id="pro" class="com.app.model.Product">
+	<constructor-arg value="201"></constructor-arg>
+	<constructor-arg value="Kurta"></constructor-arg>
+	<constructor-arg>
+		<bean class="com.app.model.Color">
+			<constructor-arg>
+				<list>
+					<value>PINK</value>
+					<value>BLUE</value>
+					<value>PURPLE</value>
+				</list>
+			</constructor-arg>
+		</bean>
+	</constructor-arg>
+   </bean>
+   
+   </beans>
+   
